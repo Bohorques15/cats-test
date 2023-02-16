@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row">
+        <!-- Columna de busquedas -->
+        <div class="col-md-6">
+            <!-- Search form -->
+            <form class="form-inline md-form form-sm">
+                <mdb-icon fas icon="search" aria-hidden="true"></mdb-icon>
+                <input class="form-control form-control-sm ml-3 w-75" name="search" type="text" placeholder="Buscar" [(ngModel)]="search" (ngModelChange)="searchBy($event)" aria-label="Buscar" mdbInput>
+            </form>
+        </div>
+        <div class="col-md-6">
+            <div class="md-form">
+                <input type="number" name="limit" min="1" [(ngModel)]="limit" (ngModelChange)="reloadCats($event)" id="form6" class="form-control" mdbInput>
+                <label for="form6">Mostrar</label>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <!-- Columna de gatos -->
+        <div class="col-md-4 mb-4" *ngFor="let cat of cats; let i = index">
+            <app-cat-item [cat]="cat"></app-cat-item>
+        </div>
+    </div>
+</div>

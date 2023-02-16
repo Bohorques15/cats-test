@@ -1,0 +1,95 @@
+<div class="container">
+  <div class="row">
+      <div class="col-md-8 mt-3 mb-5">
+        <mdb-card *ngIf="catInfo">
+          <!--Card content-->
+          <mdb-card-body>
+            <mdb-card-img [src]="catInfo.url" alt="Card image cap"></mdb-card-img>
+            <mdb-badge class="mt-3 mb-3" pill="true" default="true">{{ catInfo.breeds[0].origin }}</mdb-badge>
+            <!--Title-->
+            <mdb-card-title class="mt-2">
+              <h4>{{ catInfo.breeds[0].name }}</h4>
+            </mdb-card-title>
+            <!--Text-->
+            <mdb-card-text>{{ catInfo.breeds[0].description }}</mdb-card-text>
+            <p>{{ catInfo.breeds[0].temperament }}</p>
+            <!--Text-->
+            <div class="feature">
+              <p>Affection Level:</p> 
+              <mdb-icon fas icon="star" *ngFor="let star of filterLowerThanOrEqual(catInfo.breeds[0].affection_level)"></mdb-icon>
+              <mdb-icon far icon="star" *ngFor="let star of filterGreaterThan(catInfo.breeds[0].affection_level)"></mdb-icon>
+            </div>
+            <!--Text-->
+            <div class="feature">
+              <p>Adaptability:</p> 
+              <mdb-icon fas icon="star" *ngFor="let star of filterLowerThanOrEqual(catInfo.breeds[0].adaptability)"></mdb-icon>
+              <mdb-icon far icon="star" *ngFor="let star of filterGreaterThan(catInfo.breeds[0].adaptability)"></mdb-icon>
+            </div> 
+            <!--Text-->
+            <div class="feature">
+              <p>Child Friendly:</p> 
+              <mdb-icon fas icon="star" *ngFor="let star of filterLowerThanOrEqual(catInfo.breeds[0].child_friendly)"></mdb-icon>
+              <mdb-icon far icon="star" *ngFor="let star of filterGreaterThan(catInfo.breeds[0].child_friendly)"></mdb-icon>
+            </div> 
+            <!--Text-->
+            <div class="feature">
+              <p>Dog Friendly:</p> 
+              <mdb-icon fas icon="star" *ngFor="let star of filterLowerThanOrEqual(catInfo.breeds[0].dog_friendly)"></mdb-icon>
+              <mdb-icon far icon="star" *ngFor="let star of filterGreaterThan(catInfo.breeds[0].dog_friendly)"></mdb-icon>
+            </div> 
+            <!--Text-->
+            <div class="feature">
+              <p>Energy Level:</p> 
+              <mdb-icon fas icon="star" *ngFor="let star of filterLowerThanOrEqual(catInfo.breeds[0].energy_level)"></mdb-icon>
+              <mdb-icon far icon="star" *ngFor="let star of filterGreaterThan(catInfo.breeds[0].energy_level)"></mdb-icon>
+            </div> 
+            <!--Text-->
+            <div class="feature">
+              <p>Grooming:</p> 
+              <mdb-icon fas icon="star" *ngFor="let star of filterLowerThanOrEqual(catInfo.breeds[0].grooming)"></mdb-icon>
+              <mdb-icon far icon="star" *ngFor="let star of filterGreaterThan(catInfo.breeds[0].grooming)"></mdb-icon>
+            </div> 
+            <!--Text-->
+            <div class="feature">
+              <p>Health Issues:</p> 
+              <mdb-icon fas icon="star" *ngFor="let star of filterLowerThanOrEqual(catInfo.breeds[0].health_issues)"></mdb-icon>
+              <mdb-icon far icon="star" *ngFor="let star of filterGreaterThan(catInfo.breeds[0].health_issues)"></mdb-icon>
+            </div>  
+            <!--Text-->
+            <div class="feature">
+              <p>Intelligence:</p> 
+              <mdb-icon fas icon="star" *ngFor="let star of filterLowerThanOrEqual(catInfo.breeds[0].intelligence)"></mdb-icon>
+              <mdb-icon far icon="star" *ngFor="let star of filterGreaterThan(catInfo.breeds[0].intelligence)"></mdb-icon>
+            </div>   
+            <!--Text-->
+            <div class="feature">
+              <p>Shedding Level:</p> 
+              <mdb-icon fas icon="star" *ngFor="let star of filterLowerThanOrEqual(catInfo.breeds[0].shedding_level)"></mdb-icon>
+              <mdb-icon far icon="star" *ngFor="let star of filterGreaterThan(catInfo.breeds[0].shedding_level)"></mdb-icon>
+            </div>   
+            <!--Text-->
+            <div class="feature">
+              <p>Social Needs:</p> 
+              <mdb-icon fas icon="star" *ngFor="let star of filterLowerThanOrEqual(catInfo.breeds[0].social_needs)"></mdb-icon>
+              <mdb-icon far icon="star" *ngFor="let star of filterGreaterThan(catInfo.breeds[0].social_needs)"></mdb-icon>
+            </div> 
+            <!--Text-->
+            <div class="feature">
+              <p>Stranger Friendly:</p> 
+              <mdb-icon fas icon="star" *ngFor="let star of filterLowerThanOrEqual(catInfo.breeds[0].stranger_friendly)"></mdb-icon>
+              <mdb-icon far icon="star" *ngFor="let star of filterGreaterThan(catInfo.breeds[0].stranger_friendly)"></mdb-icon>
+            </div>    
+            <!--Text-->
+            <div class="feature">
+              <p>Vocalisation:</p> 
+              <mdb-icon fas icon="star" *ngFor="let star of filterLowerThanOrEqual(catInfo.breeds[0].vocalisation)"></mdb-icon>
+              <mdb-icon far icon="star" *ngFor="let star of filterGreaterThan(catInfo.breeds[0].vocalisation)"></mdb-icon>
+            </div>
+          </mdb-card-body>
+        </mdb-card>
+      </div>
+  </div>
+</div>
+
+
+  

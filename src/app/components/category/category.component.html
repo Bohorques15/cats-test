@@ -1,0 +1,8 @@
+<div class="category-title" *ngIf="category">
+    <h3>{{ category.name }}</h3>
+</div>
+<div class="imagenes">
+    <div class="gal_item" *ngFor="let info of catsInfo; let i = index">
+        <div style="background-image: url('{{info.url}}')" class="conten_img"></div>
+    </div>
+</div>

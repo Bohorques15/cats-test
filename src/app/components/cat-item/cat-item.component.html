@@ -1,0 +1,18 @@
+<mdb-card>
+  <!--Card image-->
+  <mdb-card-img *ngIf="cat.image" [src]="cat.image.url" alt="Card image cap"></mdb-card-img>
+  <!--Card content-->
+  <mdb-card-body>
+    <!--Title-->
+    <mdb-card-title>
+      <h4>{{ cat.name }}</h4>
+    </mdb-card-title>
+    <!--Text-->
+    <p class="card-label">Life span:</p>
+    <p class="card-text">  {{ cat.life_span+' years' }}</p>
+    <!--Text-->
+    <p class="card-label">Origin:</p>
+    <p class="card-text">  {{ cat.origin }}</p>
+    <a href="#" [routerLink]="['/cat-info',cat.id]" mdbBtn color="primary" mdbWavesEffect>Ver informacion</a>
+  </mdb-card-body>
+</mdb-card>
